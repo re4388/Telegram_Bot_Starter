@@ -22,5 +22,10 @@ function main() {
 }
 
 
-let job = new CronJob('*/10 * * * * *', () => main(), null, true, 'Asia/Taipei');
+// for test: every 10 sec => */10 * * * * *
+// at 22:00 =>0 0 22 * * *
+// every morning 8 am => 0 0 8 * * *
+
+
+let job = new CronJob('0 0 8 * * *', () => main(), null, true, 'Asia/Taipei');
 job.start();
