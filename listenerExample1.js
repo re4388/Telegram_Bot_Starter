@@ -11,9 +11,9 @@ const TOKEN = process.env.TOKEN
 
 const Slimbot = require('slimbot');
 const slimbot = new Slimbot(TOKEN);
-
 // Register listeners
 slimbot.on('message', async message => {
+
   console.log(message.chat.id);  // 1048392852
   let info =  await getWeatherInfo()
   let msg = info
